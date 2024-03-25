@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.background-image {
+  text-align: center;
+  background-image: url("finishflag.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100vh;
+}
+
+.leaderboard {
+  display: flex;
+  position: absolute;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.background {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orangered;
+  width: 100%;
+  height: 100vh;
+}
+
+table,
+td,
+th {
+  border: none;
+  /* border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent; */
+  text-align: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  background: transparent;
+}
+
+fieldset {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: white;
+  text-align: center;
+  border-top: 52px solid #cf5454aa;
+  border-left: 52px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  height: 0;
+}
+
+legend {
+  background:#cf5454aa;
+  padding: 14px;
+  
+}
+
+th,
+td {
+  background: transparent;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+thead th {
+  padding: 10px;
+}
+tbody tr:nth-child(1) {
+  background-color: transparent;
+}
+
+tbody tr:nth-child(2n + 3) fieldset {
+  border-top: 52px solid #827f7f7e;
+}
+tbody tr:nth-child(2n + 3) fieldset legend {
+  background: #827f7f7e;
+}
+tbody tr:nth-child(2n + 4) fieldset {
+  border-top: 52px solid #d0cfcf7e;
+}
+tbody tr:nth-child(2n + 4) fieldset legend {
+  background: #d0cfcf7e;
+}
+
+tbody tr:nth-child(1) fieldset {
+  border-top: 52px solid orangered;
+  
+}
+tbody tr:nth-child(1) fieldset.notfirst {
+  border-top: 52px solid #827f7f7e;
+  
+}
+tbody tr:nth-child(1) fieldset legend {
+  background: orangered;
+  color: #fff;
+}
+tbody tr:nth-child(1) fieldset.notfirst legend {
+  background: #827f7f7e;
+  color: #fff;
+}
+
+tbody tr:nth-child(2) fieldset.notfirst {
+  border-top: 52px solid #d0cfcf7e;
+}
+tbody tr:nth-child(2) fieldset.notfirst legend {
+  background: #d0cfcf7e;
+}
+th:nth-child(n + 2),
+td:nth-child(n + 2) fieldset {
+  border-left: 0px solid transparent;
+}
+th:nth-child(n + 3),
+td:nth-child(n + 3) {
+  background-color: #ddd;
+}
+th:nth-child(n + 3),
+td:nth-child(n + 3) fieldset legend{
+  color: black;
+}
+
+th:nth-child(n + 3),
+td:nth-child(n + 3) fieldset.notfirst legend{
+  color: black !important;
+}
+
+th:last-child {
+  border-top-right-radius: 5px;
+}
+th:nth-child(3) {
+  border-top-left-radius: 5px;
+}
+
+tfoot td {
+  background: #ddd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 20px;
+}
+
+.details-background {
+  position: absolute;
+  background: white;
+  width: 300px;
+  height: 200px;
+  z-index: 100;
+}
