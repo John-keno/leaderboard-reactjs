@@ -1,19 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import studentsData from "../data/students.js"; // Import your data
 import useTable from "../hooks/useTable.js"; // Import your custom hook
 import TableHead from "./TableHead.jsx";
 import TableBody from "./TableBody.jsx";
 
 export default function Leaderboard() {
-  const rowsPerPage = 5; // Number of rows per page
+  const rowsPerPage = 10; // Number of rows per page
   const [currentPage, setCurrentPage] = useState(1);
   const pageRange = useTable(studentsData, rowsPerPage);
+  const [sortedData, setSortedData] = useState(studentsData);
 
   // Calculate the start and end indices for the current page
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
 
-  const visibleCountries = studentsData.slice(startIndex, endIndex);
+  useEffect(()=>{
+    const sorted = [...sortedData].sort((a, b) => {
+      return b['score'] - a['score'];
+  });
+  
+  sorted.forEach((item,index)=>{
+    item.id = index+1;
+  })
+  setSortedData(sorted);
+  },[]);
+
+
+  const visibleCountries = sortedData.slice(startIndex, endIndex);
 
   return (
     <div className="leaderboard">
