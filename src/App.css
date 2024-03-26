@@ -28,6 +28,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-direction: column;
 }
 
 .background {
@@ -54,6 +55,31 @@ table {
   border-collapse: collapse;
   width: 80%;
   background: transparent;
+}
+
+.table-btn{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  
+
+}
+
+.table-btn button{
+  background: white;
+  border-radius: 25%;
+  color:orangered;
+  border: none;
+  padding:15px 30px;
+  cursor: pointer;
+}
+
+.table-btn button:disabled{
+  
+  color:gray;
+
+  cursor:default;
 }
 
 fieldset {
@@ -130,6 +156,7 @@ tbody tr:nth-child(2) fieldset.notfirst legend {
 th:nth-child(n + 2),
 td:nth-child(n + 2) fieldset {
   border-left: 0px solid transparent;
+  color: orangered !important;
 }
 th:nth-child(n + 3),
 td:nth-child(n + 3) {
