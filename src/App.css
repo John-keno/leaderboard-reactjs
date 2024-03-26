@@ -156,7 +156,6 @@ tbody tr:nth-child(2) fieldset.notfirst legend {
 th:nth-child(n + 2),
 td:nth-child(n + 2) fieldset {
   border-left: 0px solid transparent;
-  color: orangered !important;
 }
 th:nth-child(n + 3),
 td:nth-child(n + 3) {
