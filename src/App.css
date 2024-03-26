@@ -77,8 +77,9 @@ table {
 
 .table-btn button:disabled{
   
-  color:gray;
-
+  color:black;
+  background:#827f7f7e;
+ 
   cursor:default;
 }
 
