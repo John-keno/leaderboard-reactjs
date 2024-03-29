@@ -5,7 +5,7 @@ export default function TableHead() {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
+        <th></th>
         <th>Learning Path</th>
         <th>Overall Grade(%)</th>
       </tr>

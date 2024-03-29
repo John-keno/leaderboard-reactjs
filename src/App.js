@@ -5,9 +5,9 @@ import Leaderboard from "./components/Leaderboard";
 
 function App() {
   return (
-    <>
+    <> <AppBackground />
      <Leaderboard />
-      <AppBackground />
+     
     </>
     
   );
